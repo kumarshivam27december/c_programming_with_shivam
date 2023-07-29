@@ -8,6 +8,6 @@ void main()
 		printf("\n%s",str);
 //		str = "";
 	}
-	// close the file
+	// close the file////closing the file 
 	fclose(fp);
 }
