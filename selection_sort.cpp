@@ -25,8 +25,8 @@ for(int i=0; i<n-1; i++){
 }
 int main()
 {
-    int arr[5] = {5,4,3,2,1};
-    select(arr,5);
-    print(arr,5);
+    int arr[18] = {1,2,3,1,2,5,6,7,88,9,9,0,110,11,20,81,-1,89};
+    select(arr,18);
+    print(arr,18);
     return 0;
 }
