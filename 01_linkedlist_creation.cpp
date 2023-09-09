@@ -9,7 +9,19 @@ class node{
     this->next = NULL;
   }
 };
+
+
+void insertAthead(node* &head,int data)
+{
+  
+
+}
 int main(){
+
+  node* node1 = new node(10);
+  cout<<node1->data<<endl;
+  
+
 
 return 0;
 }
