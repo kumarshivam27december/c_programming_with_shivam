@@ -9,22 +9,26 @@ void printarray(int arr[],int n)
 }
 void insertionsort(int arr[],int n)
 {
-	for(int i = 1;i<n;i++)
+	int i=1;
+	while(i<n)
 	{
 		int temp = arr[i];
 		int j = i-1;
-		for(;j>=0;j--)
+		while(j>=0)
 		{
 			if(arr[j]>temp)
-			{//shift
+			{
 				arr[j+1] = arr[j];
 			}
 			else
 			{
-				break;	
+				break;
 			}
+			j--;
 		}
+		
 		arr[j+1] = temp;
+		i++;
 	}
 }
 int main()

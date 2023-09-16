@@ -1,18 +1,37 @@
 #include <iostream>
 using namespace std;
-int main() {
-  int arr[] = {23,3,4,42,53};
-  int n = sizeof(arr)/sizeof(arr[0]);
-
-  for (int i = 0; i < n-1; i++) {
-    for(int j=0;j<n-i-1;j++) {
-      if(arr[j]>arr[j+1]) {
-        swap(arr[i],arr[j]);
-      }
-    }
-  }
-  for (int i = 0; i < n; i++) {
-    cout << arr[i] << " ";
-  }
-  return 0;
+void printarray(int arr[],int n)
+{
+	for(int i=0;i<n;i++)
+	{
+		cout<<arr[i]<<" ";
+	}
+}
+void bubblesort(int arr[],int n)
+{
+	for(int i = 0;i<n-1;i++)
+	{
+		bool swapped = false;
+		for(int j = 0;j<n-i-1;j++)
+		{
+			if(arr[j]>arr[j+1])
+			{
+				swap(arr[j],arr[j+1]);
+			}
+			
+			swapped  =true;
+		}
+		if(swapped==false)
+		{
+			break;
+		}
+	}
+}
+int main()
+{
+	int arr[4] = {7,4,2,8};
+	int size = sizeof(arr)/sizeof(arr[0]);
+	bubblesort(arr,size);
+	printarray(arr,size);
+	return 0;
 }
