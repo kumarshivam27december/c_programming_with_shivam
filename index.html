@@ -2,17 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .container {
+            border: 0px solid none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
     <title>Document</title>
 </head>
 <body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, itaque. Cum perferendis cumque quas exercitationem consectetur nostrum. Corporis voluptas totam vero, repellendus commodi sunt, labore ea recusandae voluptates maxime veniam?
+    <div class="container">
+        <button onclick="Changecolor()" type="button" class="btn btn-danger">CLICK</button>
+    </div>
+    <script>
+        var index = 0;
+        var images = [
+        /*
+            "url('1.jpg')",
+            "url('2.jpg')",
+            "url('3.jpg')",
+            "url('4.jpg')",
+            "url('5.jpg')",
+            "url('6.jpg')",
+            "url('7.jpg')",
+            "url('8.jpg')",
+            "url('9.jpg')",
+            "url('10.jpg')",
+            "url('11.jpg')",
+            "url('12.jpg')",
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nobis perspiciatis temporibus ut beatae, minus laboriosam explicabo ad suscipit provident labore consequuntur culpa nostrum ea optio fugit aperiam! Ducimus, laborum.
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis cupiditate tenetur culpa. Accusamus, laudantium similique, ut porro, ullam sint velit repudiandae doloremque delectus quibusdam distinctio tempora dicta voluptas esse sit.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum recusandae, molestias animi, maiores eos magnam ipsam, omnis possimus nihil quo qui. Aliquam ex voluptates animi? Autem alias iste minima officiis.
-        
-    </p>
+            */
+        ];
+
+        function Changecolor() {
+            document.body.style.background = images[index++];
+            if (index > images.length - 1) {
+                index = 0;
+            }
+        }
+    </script>
 </body>
 </html>
